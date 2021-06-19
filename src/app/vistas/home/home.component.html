@@ -1,0 +1,22 @@
+<h2 align="center">Prueba práctica de conocimientos técnicos</h2>
+
+<br>
+<h3 align="center">Resumen de cantidades existenes</h3>
+
+<table class="table table-condensed table-hover">
+    <caption>.</caption>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Descripcion</th>
+			<th>Cantidad</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let item2 of elementos; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item2.categoria}}</td>
+            <td>{{item2.cantidad}}</td>
+        </tr>
+	</tbody>
+</table>

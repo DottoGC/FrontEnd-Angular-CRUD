@@ -1,0 +1,51 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+        
+      <div class="fadeIn first">
+        <h3> Nueva Categoria  </h3>
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="nuevacategoriaForm" (ngSubmit)="onNuevaCategoriaForm(nuevacategoriaForm.value)">
+        <input type="text" id="nombre" class="fadeIn second" formControlName="nombre" placeholder="nombre">
+        <!--<input type="text" id="padre_id" class="fadeIn third" formControlName="padre_id" placeholder="padre_id">
+        -->
+        <input type="text" list=browsers id="padre_id" class="fadeIn third" formControlName="padre_id" placeholder="padre"  >
+        <datalist id=browsers >
+            <option *ngFor="let item2 of categorias"> {{item2.nombre}}
+        </datalist>
+
+        <input type="submit" class="fadeIn fourth" value="Guardar">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="categorias">Ver categorias</a>
+      </div>
+  
+    </div>
+  </div>
+
+
+
+  <!--
+  <div id="ventana-stats" class="card">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>nombre</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item2 of categoriasList">
+                <td>{{item2.nombre}}</td>
+
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+ -->

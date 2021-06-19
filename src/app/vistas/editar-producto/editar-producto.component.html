@@ -1,0 +1,39 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+        
+      <div class="fadeIn first">
+        <h3> Editar Producto  </h3>
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="editarForm" (ngSubmit)="onEditarForm(editarForm.value)">
+        <label class="fadeIn second" for="exampleFormControlInput1">Nombre </label>
+       <input type="text" id="cantidad" class="fadeIn third" formControlName="nombre" placeholder="nombre">
+       
+       <label for="exampleFormControlInput1">Cantidad </label>
+       <input type="text" id="cantidad" class="fadeIn third" formControlName="cantidad" placeholder="cantidad">
+       
+       <label for="exampleFormControlInput1">Categoria </label>
+       <!--<input type="text" id="cantidad" class="fadeIn third" formControlName="categoria_id" placeholder="categoria">
+       -->
+       <input type="text" list=browsers id="categoria_id" class="fadeIn third" formControlName="categoria_id" placeholder="categoria"  >
+       <datalist id=browsers >
+           <option *ngFor="let item2 of categorias"> {{item2.nombre}}
+       </datalist>
+
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+
+      </form>
+  
+
+      
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="productos">Ver productos</a>
+      </div>
+  
+    </div>
+  </div>

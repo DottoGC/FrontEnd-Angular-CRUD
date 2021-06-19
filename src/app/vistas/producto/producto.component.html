@@ -1,0 +1,23 @@
+<br>
+<h3 align="center">Lista de Productos</h3>
+<button type="button" class="btn btn-primary" (click)="nuevoProducto()">Nuevo producto</button>
+
+<table class="table table-condensed table-hover">
+    <caption>.</caption>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Cantidad</th>
+            <th>Categoria</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let item2 of productos; let i = index" (click)="editarProducto(item2.id)">
+            <td>{{i+1}}</td>
+            <td>{{item2.nombre}}</td>
+            <td>{{item2.cantidad}}</td>
+            <td>{{item2.categoria_id}}</td>
+        </tr>
+	</tbody>
+</table>

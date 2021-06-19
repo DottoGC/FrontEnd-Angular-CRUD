@@ -1,0 +1,29 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+        
+      <div class="fadeIn first">
+        <h3> Nuevo Producto  </h3>
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="nuevoProductoForm" (ngSubmit)="onNuevoProductoForm(nuevoProductoForm.value)">
+        <input type="text" id="nombre" class="fadeIn second" formControlName="nombre" placeholder="nombre">
+        <input type="text" id="cantidad" class="fadeIn third" formControlName="cantidad" placeholder="cantidad">
+        
+        <input type="text" list=browsers id="categoria_id" class="fadeIn third" formControlName="categoria_id" placeholder="categoria"  >
+        <datalist id=browsers >
+            <option *ngFor="let item2 of categorias"> {{item2.nombre}}
+        </datalist>
+
+        <input type="submit" class="fadeIn fourth" value="Guardar">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="productos">Ver productos</a>
+      </div>
+  
+    </div>
+  </div>
+

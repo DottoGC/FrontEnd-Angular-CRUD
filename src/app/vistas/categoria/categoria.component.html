@@ -1,0 +1,26 @@
+<br>
+<h3 align="center">Lista de Categorias</h3>
+
+<button type="button" class="btn btn-primary" (click)="nuevaCategoria()">Nueva categoria</button>
+
+<table class="table table-condensed table-hover">
+    <caption>.</caption>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Nivel</th>
+			<th>Categoria padre</th>			
+		</tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let item2 of categorias; let i = index" (click)="editarCategoria(item2.id)">
+            <td>{{i+1}}</td>
+            <td>{{item2.nombre}}</td>
+			<td>{{item2.nivel}}</td>
+            <td>{{item2.padre_id}}</td>
+        </tr>
+	</tbody>
+	<caption>.</caption>
+</table>
+
