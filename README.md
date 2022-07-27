@@ -1,4 +1,4 @@
-# Frontend basico
+# Frontend basico para consumir API
 #Test for Energyresource
 
 Projecto en Angular. 
