@@ -1,7 +1,7 @@
-# FrontendEnergyresource
+# Frontend basico
+#Test for Energyresource
 
 Projecto en Angular. 
-
 
 # Instalacion
 > npm install
